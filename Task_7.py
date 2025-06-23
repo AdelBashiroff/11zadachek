@@ -4,10 +4,8 @@ def exp_maclaurin(x, tolerance=1e-9):
     term = 1.0  # Начальный член ряда (x^0 / 0!)
     n = 1  # Счётчик степени и факториала
 
-    while True:
+    while abs(term) >= tolerance:
         term *= x / n  # Следующий член ряда (x^n / n!)
-        if abs(term) < tolerance:  # Если текущий член меньше заданной точности, выходим
-            break
         result += term  # Добавляем текущий член ряда к результату
         n += 1  # Переходим к следующему члену ряда
 
