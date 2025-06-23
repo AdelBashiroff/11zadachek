@@ -10,17 +10,17 @@ def print_stars(k):
         print('* ', end='')
 
 # Верхний треугольник (на вершине)
-for i in range(n):
-    print_spaces(n - i - 1 + n)  # центрируем вверх между двумя нижними
-    print_stars(i + 1)
+for i in range(1, n+1):
+    print_spaces(n - i + n)  # центрируем вверх между двумя нижними
+    print_stars(i)
     print()
 
 # Нижние два треугольника (рядом)
-for i in range(n):
-    print_spaces(n - i - 1)      # отступ перед левым нижним треугольником
-    print_stars(i + 1)
-    print_spaces((n - i - 1) * 2)  # отступ между двумя нижними
-    print_stars(i + 1)
+for i in range(1, n+1):
+    print_spaces(n - i)      # отступ перед левым нижним треугольником
+    print_stars(i)
+    print_spaces((n - i) * 2)  # отступ между двумя нижними
+    print_stars(i)
     print()
 
 
