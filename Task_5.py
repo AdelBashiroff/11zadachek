@@ -2,7 +2,7 @@
 def sin_maclaurin(x, eps=1e-9):
     term = x  # первый член ряда (n=0)
     result = 0
-    n = 0
+    n = 0 #переменная, отслеживающая номер текущего члена ряда. 
 
     while abs(term) >= eps:
         result += term
