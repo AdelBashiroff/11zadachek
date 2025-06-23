@@ -1,20 +1,20 @@
 #Решение
-import json
-import os
+import json #для работы с сохранением и загрузкой треков
+import os #для проверки существования файла (os.path.exists)
 
-FILENAME = "tracks.json"
+FILENAME = "tracks.json" #файл для сохранения треков
 
 # Загрузка треков из файла при запуске
 def load_tracks():
     if os.path.exists(FILENAME):
         with open(FILENAME, "r", encoding="utf-8") as f:
-            return json.load(f)
+            return json.load(f) #преобразование в список словарей
     return []
 
 # Сохранение треков в файл
 def save_tracks(tracks):
     with open(FILENAME, "w", encoding="utf-8") as f:
-        json.dump(tracks, f, ensure_ascii=False, indent=4)
+        json.dump(tracks, f, ensure_ascii=False, indent=4) 
 
 # Ввод нового трека
 def add_track(tracks):
@@ -81,5 +81,5 @@ def main():
         else:
             print("Неверный ввод, попробуйте снова.")
 
-if __name__ == "__main__":
+if __name__ == "__main__": #запуск программы только в том случае если файл запущен напрямую, а не импортирован
     main()
