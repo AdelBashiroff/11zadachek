@@ -1,7 +1,6 @@
 #Решение
-import re
-import random
-from datetime import datetime
+import re # для регулярных выражений (проверка формата даты)
+import random # для случайного отказа этапа
 
 # Исключение для неверной даты
 class InvalidDateFormat(Exception):
